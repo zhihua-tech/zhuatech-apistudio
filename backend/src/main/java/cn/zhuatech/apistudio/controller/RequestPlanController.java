@@ -1,0 +1,2 @@
+/* Copyright 2026 上海如静知华信息科技有限公司 */
+package cn.zhuatech.apistudio.controller;import cn.zhuatech.apistudio.service.RequestPlanService;import jakarta.validation.Valid;import org.springframework.web.bind.annotation.*;@RestController @RequestMapping("/api/apistudio") @CrossOrigin public class RequestPlanController{private final RequestPlanService s;public RequestPlanController(RequestPlanService s){this.s=s;}@PostMapping("/plan") RequestPlanService.Result plan(@Valid @RequestBody RequestPlanService.Request r){return s.plan(r);}}
