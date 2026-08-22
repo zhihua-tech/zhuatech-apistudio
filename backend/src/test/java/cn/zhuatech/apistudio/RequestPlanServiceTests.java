@@ -1,2 +1,2 @@
-/* Copyright 2026 上海如静知华信息科技有限公司 */
+/* Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ */
 package cn.zhuatech.apistudio;import cn.zhuatech.apistudio.service.RequestPlanService;import org.junit.jupiter.api.Test;import static org.junit.jupiter.api.Assertions.*;class RequestPlanServiceTests{private final RequestPlanService s=new RequestPlanService();@Test void marksLocalGetLowRisk(){assertEquals("LOW",s.plan(new RequestPlanService.Request("GET","http://localhost:8080/health",null,5,200,0)).riskLevel());}@Test void warnsExternalDelete(){assertEquals("MEDIUM",s.plan(new RequestPlanService.Request("DELETE","https://api.example.com/items/1",null,5,204,0)).riskLevel());}}
