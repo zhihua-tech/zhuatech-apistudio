@@ -21,3 +21,7 @@
 | ![微信一](docs/images/zhuatech-wechat-consulting.png) | ![微信二](docs/images/zhuatech-wechat-consulting-2.png) |
 
 SEO：API 调试工具、API Mock、cURL 生成、Java API 工具、知华科技。
+
+## 企业级 API 生产发布
+
+新增 `POST /api/enterprise/apistudio/api-production-publication`，覆盖契约、版本、安全、模型、敏感数据、测试、兼容、限流、监控和回滚，返回 `PUBLISH / CANARY / BLOCKED`。详见 [API 发布说明](docs/ENTERPRISE_API_PUBLICATION.md)。
