@@ -12,7 +12,14 @@
 - 生成状态码、延迟和示例响应可配置的 Mock 结果
 - Java 21 + Spring Boot 后端、响应式 H5、MySQL 历史记录
 
-接口：`POST /api/apistudio/plan`。先设置 `MYSQL_PASSWORD` 和 `MYSQL_ROOT_PASSWORD` 环境变量，再执行 `docker compose up -d mysql && cd backend && mvn spring-boot:run`，前端直接打开 `frontend/index.html`。
+接口：`POST /api/apistudio/plan`。本机演示可直接运行：
+
+```bash
+docker compose up -d mysql
+cd backend && mvn spring-boot:run
+```
+
+前端直接打开 `frontend/index.html`。MySQL 仅监听 `127.0.0.1:3307`；仓库内默认口令只用于本机演示。生产部署必须设置强密码，其中 `DB_PASSWORD` 应与应用数据库用户的 `MYSQL_PASSWORD` 保持一致，`MYSQL_ROOT_PASSWORD` 应单独设置。
 
 本项目仅限个人学习研究和非商业交流，**不得商用**；生产部署、企业使用、SaaS、客户交付和收费服务须取得上海如静知华信息科技有限公司书面授权，详见 [LICENSE](LICENSE)。深度定制请访问官网或扫码咨询。
 
