@@ -15,7 +15,7 @@
 接口：`POST /api/apistudio/plan`。本机演示可直接运行：
 
 ```bash
-docker compose up -d mysql
+docker compose up -d --wait mysql
 cd backend && mvn spring-boot:run
 ```
 

@@ -5,4 +5,10 @@ services:
     environment: {MYSQL_DATABASE: zhuatech_apistudio, MYSQL_USER: zhuatech, MYSQL_PASSWORD: "${MYSQL_PASSWORD:-ZhuaTech-Local-2026!}", MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD:-ZhuaTech-Root-Local-2026!}"}
     ports: ["127.0.0.1:3307:3306"]
     volumes: ["apistudio_mysql:/var/lib/mysql", "./database/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro"]
+    healthcheck:
+      test: ["CMD-SHELL", "MYSQL_PWD=$$MYSQL_ROOT_PASSWORD mysqladmin ping -h 127.0.0.1 -u root --silent"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+      start_period: 10s
 volumes: {apistudio_mysql: {}}
