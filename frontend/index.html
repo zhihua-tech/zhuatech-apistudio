@@ -101,7 +101,7 @@
 <script>
   run.onclick = async () => {
     try {
-      const r = await fetch("http://localhost:8081/api/apistudio/plan", {
+      const r = await fetch("/api/apistudio/plan", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
