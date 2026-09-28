@@ -1,5 +1,7 @@
 # ZhuaTech APIStudio · 知华 API 调试与 Mock 工具
 
+[简体中文](README.md) | [English](README.en.md)
+
 上海如静知华信息科技有限公司社区源码工具，提供 API 请求规划、cURL 预览、风险提示和 Mock 响应生成。[知华科技官网](https://www.zhuatech.cn/)
 
 ![APIStudio](docs/images/workspace.svg)
